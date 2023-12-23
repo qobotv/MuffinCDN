@@ -1,0 +1,44 @@
+## User-generated files
+private/conf/config.php
+private/templates/cache/
+templates/cache/
+cache/
+
+# UGC
+dynamic/pfp/
+dynamic/thumbnails/
+dynamic/banners/
+dynamic/videos/
+dynamic/art/
+dynamic/art_thumbnails
+dynamic/custom_thumbnails
+dynamic/music/
+
+## Composer
+vendor/
+composer.phar
+composer.lock
+
+## Admin features
+adminer-*.php
+/latest-*-*.php
+*/pma
+*/phpmyadmin
+*/phpma
+
+# official prod instances
+public/assets/cr_branding
+public/assets/qb_branding
+
+# mariadb stuff from docker
+mariadb-data
+/public/img/css/common.css
+
+# google moment
+ads.txt
+
+# gource log
+/tools/gourcelog.txt
+
+#bootstrap theme
+/public/img/css/bootstrap.css
