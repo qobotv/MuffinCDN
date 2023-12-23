@@ -4,3 +4,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule ^(.*)$ index.php/$1
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

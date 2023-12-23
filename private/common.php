@@ -1,6 +1,12 @@
 <?php
 namespace MuffinCDN;
 
+if (!file_exists(dirname(__DIR__) . '/private/conf/config.php')) {
+    die('<b>The configuration file could not be found.</b>');
+}
+
+require_once(dirname(__DIR__) . '/private/conf/config.php');
+
 /**
  * @return string|void
  */
