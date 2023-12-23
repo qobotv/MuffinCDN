@@ -1,17 +1,10 @@
 <?php
+namespace MuffinCDN;
+
+require_once dirname(__DIR__) . '/private/common.php';
+
 if (isset($_GET['file'])) {
-    $file = '../dynamic/' . $_GET['file'];
-
-    $basepath = '../dynamic/';
-    $realBase = realpath($basepath);
-
-    $userpath = $basepath . $_GET['file'];
-    $realUserPath = realpath($userpath);
-
-    if ($realUserPath === false || strpos($realUserPath, $realBase) !== 0) {
-        http_response_code(404);
-        die();
-    }
+    $file = getFileAndVerifyUrl();
 
     if (file_exists($file)) {
         header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
